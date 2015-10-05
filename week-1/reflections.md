@@ -1,0 +1,8 @@
+# 1.1 Think About Time
+I learned about timeboxing, flow, the pomodoro technique, and counter-intuitive productivity. I've been interested in meditation and it's benefits, and it's something I'd like to learn more about and start practicing. I also found timeboxing and the pomodoro technique interesting: I like how timeboxing makes you examine how you work and how efficiently/productive you've been, rather than focusing on how long it takes you to accomplish a task.
+
+My current strategy for working is by organizing my time around my energy levels. I've realized that days where I work a lot of hours teaching, it's easy for me to add extra teaching hours, but not to add hours programming. The shift in task uses up too much mental energy, and usually I need to get the ball rolling in regards to programming before I really make any decent headway. I try to carve out a little time on Mondays and Wednesdays, and then I usually stack my programming hours on the weekend. So far this strategy has been working fairly well.
+
+I plan on using the advice of counter-intuitive productivity. I'm interested in the pomodoro technique, but I would probably modify it to periods of longer than 25 minutes.
+
+My plan for phase 0 time management is to carve out blocks of time during the week to work on this stuff, which will probably lean heavy on Saturdays and Sundays. And in order to maintain work-life balance, I'll try to carve out a couple of days during the week dedicated to maintaining a small semblance of a social life.
