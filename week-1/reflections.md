@@ -19,3 +19,10 @@ My plan for phase 0 time management is to carve out blocks of time during the we
 
 5. 'pwd' stands for 'print working directory' and it shows which directory you're currently in, as well as the file path. 'ls' lists all the files or folders in a directory. 'mv' renames files or directories. 'cd' stands for 'change directory' and it's how you move from one directory to another, and '../' can take you to the previous directory in the filepath (and when I say previous, I mean the one closer to the root). 'touch' allows you to create a file, 'mkdir' lets you make a new directory, 'less' can show you the contents of a file, 'rmdir' will remove a directory, 'rm' will remove a file, and 'help' will explain what a command does.
 
+### 1.4 Create, Fork, and Clone Repositories
+
+If I were to write out instructions, I'd say that in order to create a new repo, you simply click the '+' symbol in the upper right of the page in the top menu bar and select 'create new repository'. In order to fork a repo, simply click 'fork' which is right below the page's top menu bar. And in order to clone a repo, I'd explain that it's important to be mindful of the directory you're in; you don't want to clone the repository in the wrong directory. You'd fork a repository as opposed to creating a new one because it basically creates a branch of another project that you can then work on. If you created a new repository, you would be starting from scratch and would have to manually add or create the files, whereas forking it copies all the files and creates a new branch for you to work on.
+
+
+
+I didn't really have any struggles setting up git and GitHub, I've used GitHub before. Although, I initially wanted to fork the file into the 'phase-0' repository I created, and I'm curious if there's a way to select where to save it or move it around after it's been forked. I learned through this that I should use the command line when interacting with GitHub in order to better understand the processes that GitHub's app might gloss over. Also, it was nice to get more practice with the command line.
