@@ -6,3 +6,16 @@ My current strategy for working is by organizing my time around my energy levels
 I plan on using the advice of counter-intuitive productivity. I'm interested in the pomodoro technique, but I would probably modify it to periods of longer than 25 minutes.
 
 My plan for phase 0 time management is to carve out blocks of time during the week to work on this stuff, which will probably lean heavy on Saturdays and Sundays. And in order to maintain work-life balance, I'll try to carve out a couple of days during the week dedicated to maintaining a small semblance of a social life.
+
+## 1.2 The Command Line
+
+1.A shell is the interface that allows access to an operating systems services, either being a command-line interface (which is text only) or a graphical user interface.
+
+2. 'Bash' refers to a Unix shell and command language which runs on nearly all Unix-like operating systems.The most difficult thing about the material was checking to see what you did and how you changed things. It was easy to see where you were with 'pwd' and to see what was available with 'ls', but getting used to a non GUI interface takes some time.
+
+3. I was able to successfully use all the commands listed, but there were some which I had troubles with, like the commands related to 'pipes and redirecting'.
+
+4.I think the most important ones to learn first would be 'pwd', 'ls', 'cd', and '../', just because it's important to understand file paths and where you are. Aside from that, I think 'popd' and 'pushd' will be incredibly useful for quickly switching back and forth between directories.
+
+5. 'pwd' stands for 'print working directory' and it shows which directory you're currently in, as well as the file path. 'ls' lists all the files or folders in a directory. 'mv' renames files or directories. 'cd' stands for 'change directory' and it's how you move from one directory to another, and '../' can take you to the previous directory in the filepath (and when I say previous, I mean the one closer to the root). 'touch' allows you to create a file, 'mkdir' lets you make a new directory, 'less' can show you the contents of a file, 'rmdir' will remove a directory, 'rm' will remove a file, and 'help' will explain what a command does.
+
