@@ -10,4 +10,4 @@
 
 - I enjoyed the design aspect and the sketching, but trying to sketch on the computer and trying to find a program to make a wireframe with was tedious and I preferred to stick with my old ways of pen and paper. I did measure things out a bit and make a grid, which would've been easier had I used a computer template or if I had an easier time using the wire-framing template websites/apps.
 
-![wireframe-blog-index](imgs/wireframe-blog-index.JPG)
+![wireframe-blog-index](imgs/wireframe-blog-index.jpg)
