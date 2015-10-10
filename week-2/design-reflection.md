@@ -30,4 +30,4 @@
 
 7. I didn't find anything tedious per se, but as with all the challenges there's an aspect of racing against the clock, and there's a struggle to find the right balance of spending too much time researching and explaining too much and explaining things thoroughly, providing enough detail and examples.
 
-![Site-map](.imgs/sitemap.jpg)
+![Site-map](imgs/sitemap.jpg)
