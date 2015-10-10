@@ -1,4 +1,5 @@
 1. The 6 phases of web design are
+
 1. Information gathering
 ⋅⋅* Where you think about the purpose of the site, goals, target audience, and content
 2. Planning
