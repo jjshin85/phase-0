@@ -2,14 +2,19 @@
 
  1.Information gathering
    - Where you think about the purpose of the site, goals, target audience, and content
+
  2. Planning
     - Making a site map based on the info gathered from phase 1
+
  3. Design
     - Designing the site
+
  4. Development
     - Actually creating the site, prototyping
+
  5. Testing and delivery
     - Checking functionality, deliverying site to server
+
  6. Maintenance
     - Updates, upgrades, bug fixes
 
