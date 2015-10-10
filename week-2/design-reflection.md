@@ -28,6 +28,6 @@
 
 6. User experience design is designing how a person feels when interacting with a system. For example, looking at a website is inherently different if you view it on your phone as opposed to a computer, the screen size and dimensions are different and this affects the information presented to the user. Also, a computer isn't touch screen, whereas a phone is, which effects the functionality and how a user intuitively interacts with the site. Effective design can create an easier and even delightful experience for the user, prompting them to return and enjoy the site. It can also influence the actions that users take on the site.
 
-7. I didn't find anything tedious per se, but as with all the challenges there's an aspect of racing against the clock, and there's a struggle to find the right balance of spending too much time researching and explaining too much and explaining things thoroughly, providing enough detail and examples.
+7. Oh my goodness, adding that image took forever! It took me the longest time to figure out why it wasn't working, and I finally realized it was case sensitive and I had to capitalize the JPG file extension in the file path.
 
 ![Site-map](imgs/sitemap.JPG)
