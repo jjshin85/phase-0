@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[
+
+    <!DOCTYPE html>
+      <html>
+        <head>
+          <title>
+          </title>
+        </head>
+        <body>
+        </body>
+      </html>
+]]></content>
+  <tabTrigger>html</tabTrigger>
+  <scope>dissect-me.html</scope>
+</snippet>
