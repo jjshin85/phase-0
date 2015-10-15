@@ -1,3 +1,67 @@
-html {
-  background-color: red;
+html{
+    background-color: #ffffff;
+    color: #000080;
+}
+
+a {
+    color: #800080;
+
+}
+
+a:visited {
+    color: #ff0000;
+}
+
+ul {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+
+    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 20px; /* Firefox */
+    column-gap: 20px;
+
+    line-height: 250%;
+}
+
+ul li p {
+  line-height: 100%;
+}
+
+header {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+div{
+    line-break:auto;
+}
+
+.first-letter{
+    font-size: 20px;
+}
+
+.geico{
+    font-size:10px;
+    text-align:center;
+    line-break: auto;
+}
+
+.hline {
+    width: 100%;
+    background: #000000;
+    height: 1px;
+}
+
+#contact_info{
+    font-size: 12px;
+}
+
+img {
+  margin-top: 10px;
+}
+
+.addition_info {
+  font-size:10px;
 }
