@@ -1,0 +1,36 @@
+h1{
+    font-family:Verdana;
+    background-color: #E8E8E8;
+}
+
+.column-1 {
+    display: inline-block;
+    width: 48%;
+    background-color: #8f8f8f;
+
+}
+
+
+.column-2 {
+    display: inline-block;
+    width: 48%;
+    background-color: #cbcbcb;
+    vertical-align: top;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: #E8E8E8;
+}
+
+article{
+
+}
+
+a:link{
+    color:white
+}
+
+a:visited{
+    color:#646E7F
+}
