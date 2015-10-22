@@ -36,6 +36,8 @@ puts [1, 2, 3, 4]
 
 ### Release 2 Mini-challenges:
 
+The following code calculates the hours in a year and the minutes in a decade:
+
 ````ruby
 hours_in_year = 365 * 24
 
@@ -60,15 +62,15 @@ puts "the number of minutes in a decade is #{min_in_decade}"
   Strings are basically sentences or words, collections of sequences of alphanumeric characters. You use strings in place of words and text.
 
 - What are local variables? Why and when would you use them?
-  Local variable is a type of variable that can be used where the scope and extent of the variable is within the method or statement block in which it is declared. A local variable is declared in the method. For example, let's look at the following code:
+  Local variable is a type of variable that can be used where the scope and extent of the variable is within the method or statement block in which it is declared. As the book says, it lives in the method and can't leave it. So for example:
 
   ````ruby
   def my_name_is(name)
-    @something = "My name is ""
-    puts something + name
+    introduction = "My name is #{name}""
+    puts introduction
   end
   ````
-  The @something is a local variable that is only seen and referenced within the method.
+  The 'introduction' variable is only seen and used within the method. If you try to call it outside of the method, it won't work because it only exists within the method.
 
 - How was this challenge? Did you get a good review of some of the basics?
   I thought it was fairly easy but serves as a fair introduction to data types. I found that my ruby skills were a bit rusty and I had a lot of brushing up to do.
