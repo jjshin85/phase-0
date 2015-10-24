@@ -184,3 +184,18 @@ require_relative "cartmans_essay.md"
 
 # --- REFLECTION -------------------------------------------------------
 # Write your reflection below as a comment.
+=begin
+
+  - Which error was the most difficult to read?
+  For me, the while loop was the trickiest. It was very easy to miss the first time, and it tricked the compiler into thinking the error was from not adding an 'end' at the end of the file.
+
+- How did you figure out what the issue with the error was?
+  At first I just zoned out and added an 'end' to the bottom of the file, and then the file compiled with no errors, which was obviously wrong. Once I actually looked at the section of code where the error was supposed to be, I realized it was from the while loop and the problem was that the compiler didn't know when to stop because there was never a 'break' declaration.
+
+- Were you able to determine why each error message happened based on the code?
+  Yes, I didn't think the errors were that difficult. Granted, I say this after I absent-mindedly missed the second error I was supposed to find and took longer than I should've to figure out what was wrong.
+
+- When you encounter errors in your future code, what process will you follow to help you debug?
+  I'm going to look at the error messages. Also, while I code, I like adding 'puts' statements to print out the return values to the terminal to check to make sure the code is doing what I want.
+
+=end
