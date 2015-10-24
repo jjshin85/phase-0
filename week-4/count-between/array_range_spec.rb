@@ -1,4 +1,4 @@
-wrequire_relative "my_solution"
+require_relative "my_solution"
 
 describe 'count_between' do
   it "returns 0 for an empty array" do
