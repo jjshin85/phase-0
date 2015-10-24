@@ -47,6 +47,15 @@ min_in_decade = hours_in_year * 60 * 10
 
 puts "the number of minutes in a decade is #{min_in_decade}"
 ````
+
+### Release 5:
+
+  - [4.2.1 Defining Variables](https://github.com/jjshin85/phase-0/blob/master/week-4/defining-variables.rb)
+
+  - [4.2.2 Simple String Methods](https://github.com/jjshin85/phase-0/blob/master/week-4/simple-string.rb)
+
+  - [4.2.3 Local Variables and Basic Arithmetical Expressions](https://github.com/jjshin85/phase-0/blob/master/week-4/basic-math.rb)
+
 ### Release 7: Reflect
 
 - How does Ruby handle addition, subtraction, multiplication, and division of numbers?
