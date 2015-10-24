@@ -1,6 +1,6 @@
 # Count Between
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself].
 
 # count_between is a method with three arguments:
 #   1. An array of integers
@@ -50,7 +50,7 @@ puts "test 4"
 count_between([1,2,3,4,5,6,7,8,9,10], 0, 100)
 
 puts "test 5"
-count_between([1,1,1,1,1], 1, 1)
+count_between([3,3,3,3], 3, 3)
 
 #cd dbc/phase-0/week-4/count-between
 

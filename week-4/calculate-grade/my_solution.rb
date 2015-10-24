@@ -1,12 +1,12 @@
 # Calculate a Grade
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [with: Peter Wood].
 
 
 # Your Solution Below
 def get_grade(grade)
 
-  if grade <= 65
+  if grade <= 60
       return "F"
   elsif grade < 70
       return "D"

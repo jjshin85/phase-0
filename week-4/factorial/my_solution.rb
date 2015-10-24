@@ -1,6 +1,6 @@
 # Factorial
 
-# I worked on this challenge [by myself, with: Alan].
+# I worked on this challenge [with: Alan Alcesto].
 
 
 # Your Solution Below

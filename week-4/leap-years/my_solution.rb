@@ -1,6 +1,6 @@
 # Leap Years
 
-# I worked on this challenge [by myself, with: Peter Wood].
+# I worked on this challenge [with: Peter Wood].
 
 
 # Your Solution Below
