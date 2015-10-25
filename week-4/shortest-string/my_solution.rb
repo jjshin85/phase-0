@@ -13,9 +13,6 @@
 
 #Your Solution Below
 def shortest_string(list_of_words)
-  if list_of_words.size != 0
-    shortest_str = list_of_words.min_by{|a| a.size}
-    return shortest_str
-  else
-  end
+  shortest_str = list_of_words.min_by{|a| a.size}
+  return shortest_str
 end

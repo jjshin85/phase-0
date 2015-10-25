@@ -12,7 +12,7 @@
 
 # Your Solution Below
 def largest_integer(list_of_nums)
-  sorted_nums = list_of_nums.sort {|a,b| b <=> a}
-  largest_int = sorted_nums[0]
+  list_of_nums.sort! {|a,b| b <=> a}
+  largest_int = list_of_nums[0]
   return largest_int
 end

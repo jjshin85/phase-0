@@ -12,7 +12,11 @@
 
 # Your Solution Below
 def smallest_integer(list_of_nums)
-  sorted_nums = list_of_nums.sort_by! { |i| i }
-  smallest_int = sorted_nums[0]
-  return smallest_int
+  if list_of_nums.size != 0
+    list_of_nums.sort! { |a,b| a <=> b}
+    smallest_int = list_of_nums[0]
+    return smallest_int
+  else
+    return nil
+  end
 end
