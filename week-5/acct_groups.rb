@@ -14,11 +14,10 @@ The iterator will create a groups of 5 with no groups having less than 3 people.
 def make_array (string)
 
   names_array = string.split("\n")
-  print names_array
   return names_array
 end
 
-make_array("Caroline Artz
+name_list = make_array("Caroline Artz
 Syema Ailia
 Alan Alcesto
 Daniel Andersen
@@ -96,26 +95,108 @@ Caitlyn Y.
 Ryan Zell")
 
 
+
 def create_acct_group(names)
+  num_of_names = names.size
+  puts num_of_names
+
+  num_of_groups = check_num_groups(names)
+  remainder = check_modulo(names)
+  num_of_groups += remainder
   names.shuffle!
-  j = 0
-  i = names.size - 1
-  account_group = []
-  if (names % 5) != 0
-    until i < 0
-      for j in 0..4
-        account_group[j] = names[i]
-        j += 1
-        i -= 1
+  counter = 0
+  group_counter = 1
+  j = num_of_names -1
+  collection_of_groups = []
+
+  if ((names.size % 5) == 0) || ((names.size % 5) > 2)
+    while counter < num_of_groups
+      account_group = []
+      i = 0
+      while i < 4
+        account_group.push(names[j])
+        names.pop
+        i += 1
+        j -= 1
       end
-      j = 0
+      collection_of_groups.push(account_group)
+      puts account_group
+      puts "The group size is #{account_group.size}"
+      puts "the group number is #{group_counter}"
+      group_counter += 1
+      counter += 1
     end
 
-
   else
+    while counter < num_of_groups
+      account_group = []
+      i = 0
+      if num_of_names > (10 + remainder)
+        while i < 5
+          num_of_names -= 1
+          account_group.push(names[j])
+          names.pop
+          i += 1
+          j -= 1
+        end
+      elsif num_of_names > remainder
+        while i < 4
+        num_of_names -= 1
+        account_group.push(names[j])
+        names.pop
+        i += 1
+        j -= 1
+        end
+      else
+        num_of_names -= 1
+        account_group.push(names[j])
+        names.pop
+        i += 1
+        j -= 1
+      end
+      puts num_of_names
+      collection_of_groups.push(account_group)
+      puts account_group
+      puts "The group size is #{account_group.size}"
+      puts "the group number is #{group_counter}"
+      group_counter += 1
+      counter += 1
+    end
+  end
 
+  puts "The number of groups is #{collection_of_groups.size}"
+  puts "the number of names left in the original list is #{names.size}"
+  p collection_of_groups
 
 end
 
-def create_group_array()
-  if account_group
+def check_modulo(names)
+  remainder = names.size % 5
+end
+
+def check_num_groups(names)
+  num_of_groups = names.size / 5
+end
+
+=begin
+def create_acct_group(names)
+  num_of_groups = check_num_groups(names)
+  remainder = check_modulo(names)
+  account_group = []
+  names.shuffle!
+    i = 0
+    while i < 4
+          account_group.push(names[i])
+          i += 1
+    end
+  p account_group
+
+=end
+
+
+create_acct_group(name_list)
+
+
+
+
+# cd dbc/phase-0/week-5
