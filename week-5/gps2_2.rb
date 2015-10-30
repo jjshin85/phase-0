@@ -61,3 +61,19 @@ update_item_hash(grocery_list, "Ice Cream", 1)
 
 print_hash(grocery_list)
 
+=begin
+
+- What did you learn about pseudocode from working on this challenge?
+ It's a good way to outline what you'll be doing for the program
+- What are the tradeoffs of using Arrays and Hashes for this challenge?
+  Hashes let you keep the values paired together with its key, so it's way easier to modify the value. With arrays you'd have to search for the right value, see if there are any other instances of the value, and it'd take more work updating things if there were duplicates of a grocery item. Also, the easiest way to use an array would be to create a new class type which took grocery item and quantity as properties.
+- What does a method return?
+  It can return a data object or nil.
+- What kind of things can you pass into methods as arguments?
+  You can pass in any data objects, or other methods actually, as long as those methods return a data object
+- How can you pass information between methods?
+  By creating instance variables and havin the methods take them as arguments.
+- What concepts were solidified in this challenge, and what concepts are still confusing?
+  How hashes work, that the key is basically a pointer for the value. The syntax of how hashes work will take some work for me to get more familiar with it.
+
+=end
