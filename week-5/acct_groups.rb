@@ -94,7 +94,13 @@ Peter N Wood
 Caitlyn Y.
 Ryan Zell")
 
+def check_modulo(names)
+  remainder = names.size % 5
+end
 
+def check_num_groups(names)
+  num_of_groups = names.size / 5
+end
 
 def create_acct_group(names)
   num_of_names = names.size
@@ -110,14 +116,17 @@ def create_acct_group(names)
   collection_of_groups = []
 
   if ((names.size % 5) == 0) || ((names.size % 5) > 2)
+    #Check group size, if the number of students is evenly divisble by 5 or if the remainder is 3 or greater.
     while counter < num_of_groups
       account_group = []
       i = 0
       while i < 4
+        #iterate through list until groups size is five
         account_group.push(names[j])
         names.pop
         i += 1
         j -= 1
+
       end
       collection_of_groups.push(account_group)
       puts account_group
@@ -132,29 +141,26 @@ def create_acct_group(names)
       account_group = []
       i = 0
       if num_of_names > (10 + remainder)
+        #create groups of 5 until it needs to make smaller group sizes
         while i < 5
           num_of_names -= 1
           account_group.push(names[j])
-          names.pop
           i += 1
           j -= 1
         end
-      elsif num_of_names > remainder
+      elsif num_of_names >= remainder
         while i < 4
         num_of_names -= 1
         account_group.push(names[j])
-        names.pop
         i += 1
         j -= 1
         end
       else
         num_of_names -= 1
         account_group.push(names[j])
-        names.pop
         i += 1
         j -= 1
       end
-      puts num_of_names
       collection_of_groups.push(account_group)
       puts account_group
       puts "The group size is #{account_group.size}"
@@ -165,38 +171,24 @@ def create_acct_group(names)
   end
 
   puts "The number of groups is #{collection_of_groups.size}"
-  puts "the number of names left in the original list is #{names.size}"
   p collection_of_groups
 
 end
 
-def check_modulo(names)
-  remainder = names.size % 5
-end
-
-def check_num_groups(names)
-  num_of_groups = names.size / 5
-end
-
-=begin
-def create_acct_group(names)
-  num_of_groups = check_num_groups(names)
-  remainder = check_modulo(names)
-  account_group = []
-  names.shuffle!
-    i = 0
-    while i < 4
-          account_group.push(names[i])
-          i += 1
-    end
-  p account_group
-
-=end
-
-
 create_acct_group(name_list)
 
 
+=begin
 
+- What was the most interesting and most difficult part of this challenge?
+  They were one and the same, iterating through a nested array and figuring out the flow of the program and the order I needed to declare variables and where to put them.
+- Do you feel you are improving in your ability to write pseudocode and break the problem down?
+  Yes, usually I get the main parts of the problem, but there's usually some aspect that I didn't think about and adjustment I need to make from my original plan.
+- Was your approach for automating this task a good solution? What could have made it even better?
+  I probably could've added a few more groups of four so there wouldn't be any groups of three. But this challenge took a lot of time and I couldn't really add more complexity on top of it.
+- What data structure did you decide to store the accountability groups in and why?
+  Nested arrays, because I had to divide them into groups, and then fill in those groups.
+- What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
+  I mainly took out notes and variables I added to help me keep track of what was happening in the code. I added a lot of comments and outputed variable values to debug the program.
 
-# cd dbc/phase-0/week-5
+=end
