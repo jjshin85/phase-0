@@ -72,7 +72,7 @@ end
 - What is the difference between a local variable and an instance variable?
   A local variable is a variable defined within a method and is only accessible within the scope of a method. An instance variable is an instantiated variable and can be accessed by other methods.
 - Where can an instance variable be used?
-  Outside of the method it was generated with and it can be used by other methods within the same class of data object.
+  Outside of the method it was generated with and it can be used by other methods once it's been instantiated.
 
 
 =end
