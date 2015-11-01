@@ -135,11 +135,26 @@ end
 
 # Person 5
 def my_array_splitting_method(source)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  int_array = []
+  string_array = []
+  source.each do |x|
+    if x.is_a?(Integer)
+      int_array << x
+    else
+      string_array << x
+    end
+  end
+  sorted_arrays = [int_array] + [string_array]
+  return sorted_arrays
 end
 
 def my_hash_splitting_method(source, age)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  young_pets = []
+  all_pets = []
+  source.select {|k,v| young_pets << [k, v] if v <= age }
+  source.select {|k,v| all_pets << [k,v] if v > age}
+  sorted_dogs= [young_pets] + [all_pets]
+  return sorted_dogs
 end
 
 # Identify and describe the Ruby method(s) you implemented.
