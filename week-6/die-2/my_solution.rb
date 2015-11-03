@@ -67,5 +67,5 @@ end
 - What new methods did you learn when working on this challenge, if any?
  None, I used methods I had already known.
 - What concepts about classes were you able to solidify in this challenge?
-  Using global variables that are accessible to different methods.
+  Using instance variables that are accessible within the class and to different methods.
 =end
