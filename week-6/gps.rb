@@ -1,9 +1,16 @@
+# Your Names
+# 1) Josh Shin
+# 2) Jacob
 
+# We spent [1] hours on this challenge.
+
+
+# Importance of refactoring:
 # 1. Readability
 # 2. Logic (redudancy and syntax)
 
 
-
+# Bakery Serving Size portion calculator.
 
 def leftover_ingredient_calc(desired_item, available_ingredients)
   # What is the relationship between the food and the number?
@@ -17,17 +24,6 @@ def leftover_ingredient_calc(desired_item, available_ingredients)
   # can be considered an "ELSE" block.
 
   # This is called a "validation"
-
-
-#   hash.include?
-#   hash.keys.include?
-#   hash.has_key?
-#   hash.value.include?
-#   hahs.has_value?
-
-
-  #   hash.keys.sort {|key| key < following_key}
-
 
 #   desired_item_ingredients
   desired_item_ingredients = ingredients_needed[desired_item]
@@ -56,4 +52,19 @@ p leftover_ingredient_calc("cake", 5)
 p leftover_ingredient_calc("cake", 7)
 p leftover_ingredient_calc("cookie", 1)
 p leftover_ingredient_calc("cookie", 10)
-# p serving_size_calc("THIS IS AN ERROR", 5)
+p leftover_ingredient_calc("THIS IS AN ERROR", 5)
+
+=begin
+- What did you learn about making code readable by working on this challenge?
+  I learned the importance of readability. This program was very easy, but because of poorly named variables it took longer to figure out why each step was there and what each step was doing.
+
+- Did you learn any new methods? What did you learn about them?
+  I learned about using 'unless' instead of 'if not'. Also, I learned about different methods to return a value from hashes. For example, '.keys.include?' or 'has_key?' to look for specific key values.
+
+- What did you learn about accessing data in hashes?
+  A hash is basically a database, so you don't want the programming calling up the database each time it needs a specific value. It'll be faster if it only calls up the database once and you put the value into a variable so afterwards the program can call up that specific variable instead of calling up the database and retrieving the value every time.
+
+- What concepts were solidified when working through this challenge?
+  The importance of quickly readable and understandable code. If it takes 30 minutes to understand what's going on in a very very basic program, that's much too long. Easily readable code will help with maintenance of a program.
+
+=end
