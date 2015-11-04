@@ -65,4 +65,27 @@ They took out the 'what_is_age' method and added 'attr_reader :age'. Now, to get
 
 In addition to 'attr_reader :age', 'attr_writer :age' has been added and the 'change_my_age' method has been removed. Now, in order to read or write the age, one simply has to use the '.age' method (so yes, this code is simpler).
 
+# Release 4:
+
+class Profile
+
+  attr_accessor :age, :name, :occupation
+
+  def initialize
+    @age = 27
+    @name = "Kim"
+    @occupation = "Cartographer"
+  end
+
+  def print_info
+    puts
+    puts "age: #{@age}"
+    puts
+    puts "name: #{@name}"
+    puts
+    puts "occupation: #{@occupation}"
+    puts
+  end
+end
+
 =end
