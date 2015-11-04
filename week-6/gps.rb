@@ -1,6 +1,6 @@
 # Your Names
 # 1) Josh Shin
-# 2) Jacob
+# 2) Jacob Crofts
 
 # We spent [1] hours on this challenge.
 
