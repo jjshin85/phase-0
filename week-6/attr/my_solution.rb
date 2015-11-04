@@ -6,18 +6,47 @@
 
 class NameData
 
-end
+attr_accessor :name
 
+  def initialize(name)
+    @name = name
+    p "NameData object initialized"
+  end
+
+end
 
 class Greetings
 
+  def initialize(name)
+    @name_data_obj = NameData.new(name)
+    p "Greetings object initialized"
+  end
+
+  def greeting
+    name = @name_data_obj.name
+    p "Salutations, #{name}!"
+  end
+
 end
 
-
+=begin
 
 # Reflection
 
-=begin
+- What is a reader method?
+  A reader method is a method that reads or retrieves the instance variable of an object. It can be used by any instance of an object of that class, so it's a way for programs to access variables of a specific class.
+- What is a writer method?
+  The writer method declares or updates the value for the instance variable. That way any instance of an object of that class can use the method. It's a way for the instance variable to be accessed outside of the file where the class was initially written.
+
+- What do the attr methods do for you?
+  They provide read and write methods for a class, exactly like the above mentioned reader and writer methods.
+
+- Should you always use an accessor to cover your bases? Why or why not?
+  No, because that might grant a user too much access. Suppose you only want to give a user read access and you don't want them to have the ability to write data.
+
+- What is confusing to you about these methods?
+  Nothing really, they seem pretty straight forward.
+
 
 # Release 1:
 
@@ -36,6 +65,4 @@ They took out the 'what_is_age' method and added 'attr_reader :age'. Now, to get
 
 In addition to 'attr_reader :age', 'attr_writer :age' has been added and the 'change_my_age' method has been removed. Now, in order to read or write the age, one simply has to use the '.age' method (so yes, this code is simpler).
 
-# Release 4:
-
-
+=end
