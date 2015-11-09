@@ -1,3 +1,5 @@
+# I worked on this with Syema Ailia and we spent 1 hour on it.
+
 # RELEASE 2: NESTED STRUCTURE GOLF
 # Hole 1
 # Target element: "FORE"
@@ -142,3 +144,17 @@ end
 
 add_ly(startup_names)
 p @str_array
+
+# Reflection:
+
+=begin
+- What are some general rules you can apply to nested arrays?
+  I think of it like a branching tree or flow chart, and you have to follow the path... I hope that makes sense. Just check your logic for checking indeces and which array you're in.
+
+- What are some ways you can iterate over nested arrays?
+  Nested loops. We used recursion to call the method again within itself if certain conditions were met.
+
+- Did you find any good new methods to implement or did you re-use one you were already familiar with? What was it and why did you decide that was a good option?
+Well, I'm very proud of using recursion. Also we discovered the '.each' method is non-destructive, so we used '.map!' to modify the array. We also learned how to call elements of a nested array, i.e. 'main_array[main_array_index_position][nested_array_index_position]'.
+
+=end
