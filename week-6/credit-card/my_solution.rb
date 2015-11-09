@@ -5,8 +5,8 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge [with Malia Lehrer ].
+# I spent [1] hours on this challenge.
 
 # Pseudocode
 
@@ -54,7 +54,7 @@ class CreditCard
     if number.to_s.length != 16
       raise ArgumentError.new ("Not a valid number. Please try again.")
     end
-      @cardnumber = number
+    @cardnumber = number
     @card_array = []
   end
 
@@ -91,3 +91,16 @@ class CreditCard
   end
 
 end
+
+# Reflection:
+=begin
+- What was the most difficult part of this challenge for you and your pair?
+  Finding destructive methods to only change certain items in an array
+
+- What new methods did you find to help you when you refactored?
+  '.map.with_index', 'join' and 'split' all came in handy. Also '.inject' was used to iterate through the array and find the sum.
+
+- What concepts or learnings were you able to solidify in this challenge?
+  Basically how arrays work and iterating through them. Also, figuring out which methods are destructive and non-destructive.
+
+=end
