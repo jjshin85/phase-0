@@ -7,20 +7,16 @@
 # Outline:
 
 # Create a method to generate a letter ( b, i, n, g, o) and a number (1-100)
-  #match the letters b,i,n,g, and o to the numbers 1-5 and create a random number generator that gives a value from 0-4 and then that will match the letter value. And then we need to have another number generator which outputs a number from 1-100.
+  #Create hash that matches the letters in 'bingo' to the numbers 0-4. Next, create random number generator that return a number from 0-4, which is used to find the letter from the hash. And then we need to have another number generator which outputs a number from 1-100. The number and the letter will be the bingo call space.
 
 # Check the called column for the number called.
-  #create a method that inspects the arrays with the index number 0-4 which will match the bingo letters, and then another method to check the nested array at the bingo index number to see if the elements at those index numbers contain the value.
-
-# If the number is in the column, replace with an 'x'
-  #if the method which checked the columns have the value, update the value at that element
-
+  #create a method that will iterate through each row of the array and then check the specified 'bingo' column index position using the output from the call_space method. If the number is in the column, replace with an 'x'.
 
 # Display a column to the console
-  # print array element with certain index number will bring the values of the nested array at that column number.
+  # Iterate through the main array and only print the element in the nested array by specifying its index.
 
 # Display the board to the console (prettily)
-  #use nested iteration to print nested arrays
+  #use a loop to print each row (which would be each element of the main array) on a new line
 
 # Initial Solution
 
@@ -28,29 +24,40 @@ class BingoBoard
 
   def initialize(board)
     @bingo_board = board
+    @bingo_hash = {"b" => 0, "i" => 1, "n" => 2, "g" => 3, "0" => 4}
   end
 
-  @b = 0
-  @i = 1
-  @n = 2
-  @g = 3
-  @o = 4
+
+
   def call_space
     #gives board value
-    bingo_val = Random.new(0..4)
-    num_val = Random.new(0...100)
-    case bingo_val
-    when bingo_val = @b
-    when bingo_val = @i
-
-    end
+    @letter_position = @bingo_hash.key(Random.rand(0..4))
+    @num_val = Random.rand(0..100)
   end
 
   def check_board
     #check if last number called matches any values on board
+    for i in 0..4
+      if @bingo_board[i][@bingo_hash[@letter_position]] == @num_val
+        @bingo_board[i][@bingo_hash[@letter_position]] = "X"
+        i += 1
+      else
+        i += 1
+      end
+    end
   end
 
   def display_board
+    for i in 0...@bingo_board.size
+      p @bingo_board[i]
+    end
+  end
+
+  def display_column
+    p "For column #{@letter_position}, the values are:"
+    for i in 0...@bingo_board.size
+      p @bingo_board[i][@bingo_hash[@letter_position]]
+    end
   end
 end
 
@@ -67,6 +74,10 @@ board = [[47, 44, 71, 8, 88],
 
 new_game = BingoBoard.new(board)
 
+new_game.call_space
+new_game.check_board
+new_game.display_column
+new_game.display_board
 
 #Reflection
 
