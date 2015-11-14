@@ -81,6 +81,4 @@ var michaelPhelps = new Athlete("Michael Phelps", 29, "swimming", "It's medicina
 console.log(michaelPhelps.constructor === Athlete)
 console.log(michaelPhelps.name + " " + michaelPhelps.sport + " " + michaelPhelps.quote)
 
-
-
 // Reflection
