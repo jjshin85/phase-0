@@ -1,4 +1,4 @@
-// Person 3: Pseudocode to Code
+// Whoops, I was supposed to do Person 4, but accidently did Person 3: Pseudocode to Code
 
 function sum(array)
 {
