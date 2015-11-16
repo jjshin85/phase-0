@@ -1,39 +1,46 @@
-// Whoops, I was supposed to do Person 4, but accidently did Person 3: Pseudocode to Code
+//Person 4: Refactor and translate to user stories
 
-function sum(array)
+// Refactored Solution
+function sum(numbers)
 {
-  var arraySum = 0;
-  for (var i = 0; i < array.length; i ++)
+  total = 0;
+  for (var i = 0;  i < numbers.length ;i++)
   {
-    arraySum += array[i];
+     total += numbers[i];
   }
-  return arraySum;
+  return total;
 }
 
-function mean(array)
+
+function mean(numbers)
 {
-  var arraySum = sum(array);
-  var arrayMean = arraySum / array.length;
-  return arrayMean;
+  var total = sum(numbers);
+  var average = total/numbers.length;
+  return average;
 }
 
-function median(array)
+function median(numbers)
 {
-  var medianLength = array.length / 2;
-  var medianNum = 0;
-  var medianNumbers = [];
-  array.sort;
-  if (array.length % 2 ==0)
-  {
-    //if the size of the list is an even number, returns average
-    //of two median numbers
-    medianNum = (array[medianLength-1] + array[medianLength]) / 2;
-    return medianNum;
-  }
-  else
-  {
-    medianNum = array[Math.floor(medianLength)];
-    return medianNum;
-  }
+  var sort = numbers.sort(function(a, b){return a-b});
+  var middle_index = numbers.length/2;
+  var middle_number = sort[middle_index]-1;
+  return middle_number;
 }
 
+// Driver Code
+var numsArray = [1,2,3,4,5,6,7,8,9,10,42,93]
+
+console.log(sum(numsArray));
+console.log(mean(numsArray));
+console.log(median(numsArray));
+
+/*
+User Stories:
+
+I want a program that takes a list of numbers and finds the sum.
+
+I want a program that takes a list of numbers and finds the average.
+
+I want a program that finds a list of numbers and finds the median number. If there are an even amount of numbers, I want it to find the lower number
+
+*/
