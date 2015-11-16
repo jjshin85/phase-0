@@ -1,6 +1,6 @@
  // Manipulating JavaScript Objects
 
-// I worked on this challenge: [by myself, with: ]
+// I worked on this challenge: [by myself]
 
 // There is a section below where you will write your code.
 
@@ -45,13 +45,15 @@ adam.children = terah.children;
 
 // __________________________________________
 // Reflection: Use the reflection guidelines
+//1. What tests did you have trouble passing? What did you do to make it pass? Why did that work?
+// I had difficulty defining a children object named Carson.
+// at first I tried to make a new object and assign it to 'terah'
+// rather than adding it as a property of 'terah'.
+//2. How difficult was it to add and delete properties outside of the object itself?
+// It was pretty easy, just declaring the variable with a new value.
+//3. What did you learn about manipulating objects in this challenge?
+// That you could just put '.property_name' after the variable name.
 //
-//
-//
-//
-//
-//
-
 
 // __________________________________________
 // Driver Code:  Do not alter code below this line.

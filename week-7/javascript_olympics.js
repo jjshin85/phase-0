@@ -1,8 +1,8 @@
  // JavaScript Olympics
 
-// I paired [by myself, with:] on this challenge.
+// I paired [by myself] on this challenge.
 
-// This challenge took me [#] hours.
+// This challenge took me [1] hours.
 
 
 // Warm Up
@@ -10,28 +10,28 @@
 
 // Bulk Up
 var athletes = []
-function addAthlete(name, gameEvent, won)
+function addAthlete(name, gameEvent, win)
 {
   var athlete = {};
   athlete.name = name;
   athlete.gameEvent = gameEvent;
-  athlete.won = won;
+  athlete.win = win;
   athletes.push(athlete);
 }
 
 function gameResults(array)
 {
-  var won = "";
+  var win = "";
   var gameEvent = "";
   var name = "";
 
   for (var i = 0; i < array.length; i ++)
   {
-    var won = array[i].won;
+    var win = array[i].win;
     var gameEvent = array[i].gameEvent;
     var name = array[i].name;
 
-    console.log(name + " " + won + " the " + gameEvent + ".");
+    console.log(name + " " + win + " the " + gameEvent + ".");
   }
 }
 addAthlete("NPH", "discus throw", "lost");
@@ -82,3 +82,11 @@ console.log(michaelPhelps.constructor === Athlete)
 console.log(michaelPhelps.name + " " + michaelPhelps.sport + " " + michaelPhelps.quote)
 
 // Reflection
+/*
+- What JavaScript knowledge did you solidify in this challenge?
+  How to declare and access variables and properties. How to add a property to an object. Also, how to write functions.
+- What are constructor functions?
+ They're like initialize methods in ruby. They create objects and instantiate properties with the values passed from the arguments.
+- How are constructors different from Ruby classes (in your research)?
+ You can add properties outside of an object's instantiation by a constructor and the value will be stored by the object. I think.
+*/

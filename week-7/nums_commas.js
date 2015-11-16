@@ -1,7 +1,7 @@
 // Separate Numbers with Commas in JavaScript **Pairing Challenge**
 
 
-// I worked on this challenge with: .
+// I worked on this challenge with: I worked on this by myself. I got a bit busy with my job and couldn't find a partner in time.
 
 // Pseudocode
 // step 1: write method that takes integer as argument
@@ -14,7 +14,7 @@
 
 
 // Initial Solution
-
+/*
 function separateComma (number)
 {
 
@@ -26,8 +26,6 @@ function separateComma (number)
   {
 
       var indexCount = 0;
-      /*declaring indexCount outside of the for loop so the variable
-      updates are saved outside of the loop*/
 
       for (var i = numberString.length-1; i >= 0; i --)
       {
@@ -53,21 +51,7 @@ function separateComma (number)
   }
 
 }
-
-/*
-
-    for (var i = numberString.length - 1; i >= 0; i --)
-    {
-      numArray.push(numberString.charAt(i));
-    }
-    for (var i = 0; i < numArray.size; i ++)
-    {
-        numArray
-    }
-
-    var numWithCommas = numArray.toString()
-    */
-
+*/
 
 separateComma(123);
 separateComma(1234);
@@ -76,7 +60,44 @@ separateComma(123456789);
 separateComma(1234567891);
 
 // Refactored Solution
+function separateComma (number)
+{
 
+  var numberString = number.toString();
+  var numArray = [];
+  var numWithCommas = "";
+
+  if (numberString.length > 3)
+  {
+
+      var indexCount = 0;
+      //declaring indexCount outside of the for loop so the variable
+      //updates are saved outside of the loop
+
+      for (var i = numberString.length-1; i >= 0; i --)//counting down to reverse the index of the string
+      {
+        if( (indexCount != 0) && (indexCount % 3 == 0) )
+        {
+          numArray.push(numberString.charAt(i) + ",");
+          indexCount +=1;
+        }
+        else
+        {
+          numArray.push(numberString.charAt(i));
+          indexCount += 1;
+        }
+      }
+
+    var numWithCommas = numArray.reverse().join("");
+
+    console.log(numWithCommas);
+  }
+  else
+  {
+    console.log(number);
+  }
+
+}
 
 
 
@@ -86,3 +107,13 @@ separateComma(1234567891);
 
 
 // Reflection
+/*
+- What was it like to approach the problem from the perspective of JavaScript? Did you approach the problem differently?
+ Yes, I feel that ruby has more methods available for accessing and manipulating variables in an array.
+- What did you learn about iterating over arrays in JavaScript?
+In ruby you usually give a range to iterate over, such as "for i in 1..10" whereas in javascript you give a range but also define a variable and how you want it incremented over that range. Ruby is much easier and readable than javascript.
+- What was different about solving this problem in JavaScript?
+ I had to be much more aware of indexing and how that index changed. Also, I treated the string like an array when i called the method 'charAt()'.
+- What built-in methods did you find to incorporate in your refactored solution?
+  I thought the initial solution was fairly simple, so I didn't really change anything. I did add a few comments to make things clearer.
+*/

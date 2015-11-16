@@ -5,8 +5,13 @@
 // Program Structure
 // Write your own variable and do something to it.
 
+var number = 24;
+number +=1;
 
+//Favorite food:
 
+prompt("Hey, what's your favorite food?");
+confirm("Hey, that's mine, too!");
 
 // Complete one of the exercises: Looping a Triangle, FizzBuzz, or Chess Board
 
@@ -58,3 +63,11 @@ findMinimum(2, 20);
 
 // Data Structures: Objects and Arrays
 // Create an object called "me" that stores your name, age, 3 favorite foods, and a quirk below.
+
+var me = {};
+me.name = "Methusala";
+me.age = 999;
+me.favoriteFood.mashedPotatoes = "mashed potatoes";
+me.favoriteFood.coffee = "coffee";
+me.favoriteFood.sushi = "sushi";
+me.quirk = "At one point in my life I took yodeling lessons.";
