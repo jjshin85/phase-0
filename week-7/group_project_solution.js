@@ -23,7 +23,7 @@ function median(numbers)
 {
   var sort = numbers.sort(function(a, b){return a-b});
   var middle_index = numbers.length/2;
-  var middle_number = sort[middle_index]-1;
+  var middle_number = sort[middle_index-1];
   return middle_number;
 }
 
