@@ -229,3 +229,13 @@ p "And for the 'left_to_right' board... "
 scorer4 = BingoScorer.new(left_to_right)
 
 # Reflection
+=begin
+- What concepts did you review or learn in this challenge?
+  This helped my understanding of iteration and also refactoring. I really tried to get rid of unnecessary steps. I'm sure I have a few extra variables, but this was the best I could do for now.
+
+- What is still confusing to you about Ruby?
+  I'm still learning about all the different methods that are at my disposal. I just learned about the '.all?'' method, which I'm sure will come in handy down the line.
+
+- What are you going to study to get more prepared for Phase 1?
+  The different methods at my disposal and I'll try to refactor as often as possible.
+=end
