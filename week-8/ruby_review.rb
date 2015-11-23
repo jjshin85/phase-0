@@ -43,28 +43,119 @@ left_to_right = [[47, 44, 71, 8, 'x'],
 
 
 # Initial Solution
+# class BingoScorer
+
+#   def initialize(board)
+#     @board = board
+#     @doneChecking = false
+#     while @doneChecking != true
+#       checkHorizontal
+#       if @doneChecking == true then break end
+#       checkVertical
+#       if @doneChecking == true then break end
+#       checkFromTopLeft
+#       if @doneChecking == true then break end
+#       checkFromBottomLeft
+#       @doneChecking = true
+#     end
+#   end
+
+#   def checkHorizontal
+#     p "checking horizontal"
+#     @board.each_with_index do |row, index|
+#       if row.all? {|element| element == "x"}
+#         p "Horizontal bingo!"
+#         @doneChecking = true
+#       end
+#     end
+#   end
+
+#   def checkVertical
+#     p "checking vertical"
+#     possibleBingo = false
+#     column_num = nil
+#     @board.each_with_index do |row, row_index|
+#       row.each_with_index do |space, space_index|
+#         if space == "x"
+#           possibleBingo = true
+#           column_num = space_index
+#         end
+#       end
+#     end
+#     if possibleBingo == true
+#       if @board.all? {|row| row[column_num] == "x"}
+#         p "Vertical Bingo!"
+#         @doneChecking = true
+#       end
+#     end
+#   end
+
+#   def checkFromTopLeft
+#     p "checking from top left"
+#     vals_to_check = []
+#     counter = 0
+#     @board.each_with_index do |row, row_index|
+#       vals_to_check << row[counter]
+#       counter += 1
+#     end
+#     if vals_to_check.all? {|element| element == "x"}
+#       p "Left top to bottom right Bingo!"
+#       @doneChecking = true
+#     end
+#   end
+
+#   def checkFromBottomLeft
+#     p "checking from bottom left"
+#     vals_to_check = []
+#     counter = 4
+#     @board.each do |row|
+#       vals_to_check << row[counter]
+#       counter -= 1
+#     end
+#     if vals_to_check.all? {|element| element == "x"}
+#       p "Left bottom to top right Bingo!"
+#     end
+#   end
+
+# end
+
+# p "the 'horizontal' board is ..."
+# scorer1 = BingoScorer.new(horizontal)
+# # scorer1.checkHorizontal
+# p "the vertical board is ..."
+# scorer2 = BingoScorer.new(vertical)
+# # scorer2.checkVertical
+
+# p "Board: right_to_left is "
+# scorer3 = BingoScorer.new(right_to_left)
+
+# p "Board right_to_left is "
+# scorer4 = BingoScorer.new(left_to_right)
+
+# Refactored Solution
+
 class BingoScorer
 
   def initialize(board)
     @board = board
     @doneChecking = false
-    while @doneChecking == false
+    while @doneChecking != true
+      #adding if statements to break if there is a 'bingo'
       checkHorizontal
+      if @doneChecking == true then break end
       checkVertical
+      if @doneChecking == true then break end
       checkFromTopLeft
+      if @doneChecking == true then break end
+      checkFromBottomLeft
+      @doneChecking = true
     end
   end
 
   def checkHorizontal
-    @board.each_with_index do |row, index|
-      # array = []
-      # row.each do |space|
-      #   array << space
-      # end
-      # p "row at #{index}:"
-      # p array
+    @board.each do |row|
       if row.all? {|element| element == "x"}
-        p "Horizontal bingo!"
+        p "Bingo!"
         @doneChecking = true
       end
     end
@@ -73,28 +164,21 @@ class BingoScorer
   def checkVertical
     possibleBingo = false
     column_num = nil
-    @board.each_with_index do |row, row_index|
+    @board.each do |row|
       row.each_with_index do |space, space_index|
         if space == "x"
+          #if there is an 'x' in a column, it saves the column index
           possibleBingo = true
           column_num = space_index
         end
       end
     end
     if possibleBingo == true
+      #check each row at the same column index number
       if @board.all? {|row| row[column_num] == "x"}
-        p "Vertical Bingo!"
+        p "Bingo!"
         @doneChecking = true
       end
-    end
-  end
-
-
-  def testAll(array)
-    if array.all? {|space| space == "x"}
-      return true
-    else
-      return false
     end
   end
 
@@ -102,47 +186,46 @@ class BingoScorer
     vals_to_check = []
     counter = 0
     @board.each_with_index do |row, row_index|
+      #adding the values in the top left to bottom right diagonal spaces to an array
       vals_to_check << row[counter]
       counter += 1
     end
-    p "checking from top left"
     if vals_to_check.all? {|element| element == "x"}
-      p "Left to Right Diagonal Bingo!"
+      p "Bingo!"
       @doneChecking = true
-    else
-      p "not a Diagonal bingo"
     end
   end
 
   def checkFromBottomLeft
-
-
+    vals_to_check = []
+    counter = 4
+    @board.each do |row|
+      #adding the values from the bottom left to top right diagonal spaces to an array
+      vals_to_check << row[counter]
+      counter -= 1
+    end
+    if vals_to_check.all? {|element| element == "x"}
+      p "Bingo!"
+    end
   end
+
 end
-testArray = [[0,1,2,3,4],[0,1,2,3,4],["x","x","x","x"],[0,1,2,3,4]]
-p "the 'horizontal' board is ..."
-scorer1 = BingoScorer.new(horizontal)
-# scorer1.checkHorizontal
-p "the vertical board is ..."
-scorer2 = BingoScorer.new(vertical)
-# scorer2.checkVertical
-
-p "Board: right_to_left is "
-scorer3 = BingoScorer.new(right_to_left)
-# scorer3.checkFromTopLeft
-# scorer1.testAll([2,3,3,4,4,4,4,4])
-# scorer1.testAll([4,4,4,4,4,4])
-# scorer1.testAll(["x", "x", "x"])
-# scorer1.testAll(["x", "x", "x", "y"])
-# Refactored Solution
-
-
 
 
 
 
 # DRIVER TESTS GO BELOW THIS LINE
 # implement tests for each of the methods here:
+p "And for the 'horizontal' board..."
+scorer1 = BingoScorer.new(horizontal)
 
+p "And for 'vertical' board ..."
+scorer2 = BingoScorer.new(vertical)
+
+p "And for the 'right_to_left' board... "
+scorer3 = BingoScorer.new(right_to_left)
+
+p "And for the 'left_to_right' board... "
+scorer4 = BingoScorer.new(left_to_right)
 
 # Reflection
