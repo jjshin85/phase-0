@@ -140,21 +140,31 @@ class BingoScorer
     @board = board
     @doneChecking = false
     while @doneChecking != true
-      #adding if statements to break if there is a 'bingo'
+      #Adding 'while' loop so I can also add if statements to break from the loop if there
+      # is a 'bingo'. Trying to keep overhead low.
       checkHorizontal
       if @doneChecking == true then break end
+        #I realize I'm repeating this line of code but don't see the use in making a function to make it repeatable
       checkVertical
       if @doneChecking == true then break end
       checkFromTopLeft
       if @doneChecking == true then break end
       checkFromBottomLeft
       @doneChecking = true
+      #This final '@doneChecking=true' ensures that if there are no 'bingo's,
+      #the program will stop checking.
     end
+  end
+
+  def checkIfSame?(array)
+    #This is a method to check if all elements equal 'x'.
+    array.all? {|element| element == "x"}
+    #Returns true or false if all elements of array equals 'x'.
   end
 
   def checkHorizontal
     @board.each do |row|
-      if row.all? {|element| element == "x"}
+      if checkIfSame?(row)
         p "Bingo!"
         @doneChecking = true
       end
@@ -167,15 +177,15 @@ class BingoScorer
     @board.each do |row|
       row.each_with_index do |space, space_index|
         if space == "x"
-          #if there is an 'x' in a column, it saves the column index
+          #If there is an 'x' in a column, it saves the column index
           possibleBingo = true
           column_num = space_index
         end
       end
     end
     if possibleBingo == true
-      #check each row at the same column index number
       if @board.all? {|row| row[column_num] == "x"}
+        #This checks each row at the same column index number
         p "Bingo!"
         @doneChecking = true
       end
@@ -190,7 +200,7 @@ class BingoScorer
       vals_to_check << row[counter]
       counter += 1
     end
-    if vals_to_check.all? {|element| element == "x"}
+    if checkIfSame?(vals_to_check)
       p "Bingo!"
       @doneChecking = true
     end
@@ -204,7 +214,7 @@ class BingoScorer
       vals_to_check << row[counter]
       counter -= 1
     end
-    if vals_to_check.all? {|element| element == "x"}
+    if checkIfSame?(vals_to_check)
       p "Bingo!"
     end
   end
