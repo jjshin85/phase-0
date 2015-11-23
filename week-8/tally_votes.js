@@ -1,7 +1,7 @@
 // Tally Votes in JavaScript Pairing Challenge.
 
-// I worked on this challenge with:
-// This challenge took me [#] hours.
+// I worked on this challenge with: Malia Lehrer
+// This challenge took me 3 hours.
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -42,8 +42,20 @@ var voteCount = {
 }
 
 
+// Pseudocode
+// Make a new set of properties for voteCount
+// A count of zero should be a property of the name
+// which in turn should be a property of the office position
+//which should be a property of voteCount
+// Add 1 to the count for each name every time the name appears within that office position
+// Bubble sort the vote counts within each office
+// Output the name that matches the highest vote count
+// Into the officers object
+// As the officer
 
-
+// __________________________________________
+// Initial Solution
+/*
 for (var key in votes)
 {
    if (votes.hasOwnProperty(key))
@@ -51,7 +63,7 @@ for (var key in votes)
       var voterName = votes[key];
       for (var officePosition in voterName)
       {
-          // important check that this is objects own property
+          // important check that this is object's own property
           // not from prototype officePosition inherited
           //voteCount[officePosition][voterName] = 0;
           if(voterName.hasOwnProperty(officePosition))
@@ -87,6 +99,7 @@ for (var key in votes)
 
 
 console.log(voteCount);
+
 /* The name of each student receiving a vote for an office should become a property
 of the respective office in voteCount.  After Alex's votes have been tallied,
 voteCount would be ...
@@ -107,7 +120,7 @@ var officers = {
   secretary: undefined,
   treasurer: undefined
 };
-
+/*
 for (var officePosition in voteCount)
 {
     var highestVote = 0;
@@ -125,32 +138,85 @@ for (var officePosition in voteCount)
     console.log(officerName + " was elected for " + officePosition + " with " + highestVote
       + " votes.");
 }
-
-
-// Pseudocode
-
-
-// __________________________________________
-// Initial Solution
-
-
-
-
-
-
-
+*/
 // __________________________________________
 // Refactored Solution
+//Create a property in vote count with each office position (i.e. president, vice-president) which also
+//has each name in the 'votes' data object as a sub-property (i.e. 'voteCount.president.Alex')
+for (var key in votes)
+{
+   if (votes.hasOwnProperty(key))
+   {
+      var voterName = votes[key];
+      for (var office in voterName)
+      {
+          if(voterName.hasOwnProperty(office))
+          {
+            voteCount[office][key] = 0;
+          }
+      }
+    }
 
+};
 
+//Iterate through votes to tally each persons votes
+for (var key in votes)
+{
+   if (votes.hasOwnProperty(key))
+   {
+       var voterName = votes[key];
 
+        for (var office in voterName)
+        {
+          if(voterName.hasOwnProperty(office))
+          {
+            voteCount[office][voterName[office]] +=1;
+          }
+        }
+    }
+};
 
+/* Once the votes have been tallied, assign each officer position the name of the
+student who received the most votes. */
+var officers = {
+  president: undefined,
+  vicePresident: undefined,
+  secretary: undefined,
+  treasurer: undefined
+};
+
+//Iterate through voteCount and find the person in each office category with the highest number of votes
+//assign that person as an officer in their respective office position
+for (var office in voteCount)
+{
+    var highestVote = 0;
+    var officePosition = voteCount[office];
+    var officerName = "";
+    for (var name in officePosition)
+    {
+      if (officePosition[name] > highestVote)
+      {
+        highestVote = officePosition[name];
+        officerName = name;
+      }
+    }
+    officers[office] = officerName;
+}
 
 
 // __________________________________________
 // Reflection
 
+/*
+- What did you learn about iterating over nested objects in JavaScript?
+  It's possible to access any part of an object as long as you understand the path, but understanding how to define the path is vary tricky. Also, I learned about using the 'for (var element in dataCollection)'' to iterate through a data collection such as a hash or an array.
 
+- Were you able to find useful methods to help you with this?
+  Yes, we used 'hasOwnProperty()' to check if an object has a specific property. Also, we used the above mentioned 'for (var Key in DataCollection)' to iterate through a data collection.
+
+- What concepts were solidified in the process of working through this challenge?
+  Iteration and clearly file paths were solidified for me, because in order to make this DRY we had to make sure the automated processes were clearly organized and defined correctly.
+*/
 
 
 

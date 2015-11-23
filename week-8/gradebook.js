@@ -1,7 +1,7 @@
 /*
 Gradebook from Names and Scores
-I worked on this challenge [by myself, with:]
-This challenge took me [#] hours.
+I worked on this challenge [with: Syema Ailia]
+This challenge took me [1] hours.
 You will work with the following two variables.  The first, students, holds the names of four students.
 The second, scores, holds groups of test scores.  The relative positions of elements within the two
 variables match (i.e., 'Joseph' is the first element in students; his scores are the first value in scores.).
@@ -16,104 +16,106 @@ var scores = [ [80, 70, 70, 100],
                [100, 90, 95, 85] ]
 
 
-function Gradebook(names, scores)
-{
-    var studentNames = names;
-    for (var i = 0; i < studentNames.length; i ++)
-    {
-      this[studentNames[i]] = {};
-    };
-
-    for (var i = 0; i < studentNames.length; i ++)
-    {
-      this[studentNames[i]].testScores = [];
-      for (var j = 0; j < scores[i].length; j++)
-      {
-        this[studentNames[i]].testScores.push(scores[i][j]);
-  //      console.log("Student: " + studentNames[i]);
-//        console.log("scores: " + scores[i][j]);
-      };
-    };
-
-    gradebook.addScore = function(name, score)
-{
-  for (var i = 0; i < students.length; i ++)
-  {
-    if (this[students[i]] == gradebook[name])
-    {
-      console.log(gradebook[students[i]]);
-      //this[studentNames[i]].testScores.push(score);
-      gradebook[name].testScores.push(score);
-    };
-  };
-};
-}
-
-
-var gradebook = new Gradebook(students, scores);
-
-
-
-gradebook.addScore("Susan", 80);
-
-console.log(gradebook);
-console.log(gradebook.Susan.testScores);
-console.log(gradebook.Susan.testScores.length);
-console.log(gradebook);
+// __________________________________________
+// Write your code below.
 /*
 var gradebook = {};
 
-gradebook.Joseph = {};
-gradebook.Susan = {};
-gradebook.William = {};
-gradebook.Elizabeth = {};
+for (var i = 0; i < students.length; i ++){
+  var studentName = students[i]
+  gradebook[ students[i] ] = {};
+}
+for (var names in students)
+{
+  var studentName = students[names]
+  gradebook[studentName] = {};
+}
 
-gradebook.Joseph.testScores = scores[0];
-gradebook.Susan.testScores = scores[1];
-gradebook.William.testScores = scores[2];
-gradebook.Elizabeth.testScores = scores[3];
+var counter = 0;
+for (var name in gradebook)
+{
+  gradebook[name].testScores = scores[counter];
+  counter +=1;
+}
 
-gradebook.addScore = function(name, score){
-  if (gradebook.[name] != null)
-  {
-    gradebook.[name].testScores.push(score);
-  }
+gradebook.addScore = function(name, score)
+{
+  gradebook[name].testScores.push(score);
 };
+
+gradebook.getAverage = function(name)
+{
+  var averageVal = average(gradebook[name].testScores);
+  return averageVal;
+};
+
+console.log(gradebook);
+
+average = function(array)
+{
+  var total = array.reduce(function(a, b)
+  {
+  return a + b;
+  });
+  var averageVal = total / array.length;
+  return averageVal;
+}
+
 */
-
-
-
-
-
-
-
-
-// __________________________________________
-// Write your code below.
-
-
-
-
-
-
 
 
 // __________________________________________
 // Refactored Solution
 
+var gradebook = {};
 
+//iterate through 'students' array and assign each value as a property for 'gradebook' object.
 
+for (var names in students)
+{
+  var studentName = students[names]
+  gradebook[studentName] = {};
+}
 
+//iterate through 'gradebook' properties and add 'testScores' as a sub-property to each.
+//iterate through 'scores' array and assign each value as the value of its corresponding person's testScores' property
+var counter = 0;
+for (var name in gradebook)
+{
+  gradebook[name].testScores = scores[counter];
+  counter +=1;
+}
 
+gradebook.addScore = function(name, score)
+{
+  gradebook[name].testScores.push(score);
+};
 
+gradebook.getAverage = function(name)
+{
+  var averageVal = average(gradebook[name].testScores);
+  return averageVal;
+};
 
+average = function(array)
+{
+  var total = array.reduce(function(a, b){return a + b});
+  var averageVal = total / array.length;
+  return averageVal;
+}
 
 // __________________________________________
 // Reflect
+/*
+- What did you learn about adding functions to objects?
+  You don't need to create a function for an object when you initialize it, you can create it afterwards.
 
+- How did you iterate over nested arrays in JavaScript?
+  I used the 'for(var property in object)' which iterates through each property of an object.
 
-
-
+- Were there any new methods you were able to incorporate? If so, what were they and how did they work?
+  Yes, 'reduce()' which finds the sum of an array and also the aforementioned 'for' iterator method.
+*/
 
 
 
@@ -175,12 +177,12 @@ assert(
 
 assert(
   (average instanceof Function),
-  "The value of average should be a Function.\n",
+  "The value of average should be a Function.",
   "7. "
 )
 assert(
   average([1, 2, 3]) === 2,
-  "average should return the average of the elements in the array argument.\n",
+  "average should return the average of the elements in the array argument.",
   "8. "
 )
 
