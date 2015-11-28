@@ -83,4 +83,4 @@ end
   The different methods for manipulating arrays and hashes.
 =end
 
-# link to ruby_review_2:
+# link to ruby_review_2: https://github.com/jjshin85/phase-0/blob/master/week-9/ruby-review-2/ruby-review.rb

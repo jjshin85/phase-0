@@ -1,5 +1,5 @@
-# I worked on this challenge [by myself, with: ].
-# This challenge took me [#] hours.
+# I worked on this challenge [with: Luis Fernando Plaz].
+# This challenge took me [.5] hours.
 
 
 # Pseudocode
@@ -32,8 +32,9 @@ def fizzbuzz(int)
   end
 
 end
-=end
+
 p super_fizzbuzz([3, 5, 2, 4, 30, 6, 15])
+=end
 
 # Refactored Solution
 
@@ -46,11 +47,11 @@ end
 
 def fizzbuzz(int)
   if int % 3 == 0 && int % 5 == 0
-    int = "fizzbuzz"
+    int = "FizzBuzz"
   elsif int % 5 == 0
-    int = "buzz"
+    int = "Buzz"
   elsif int % 3 == 0
-    int = "fizz"
+    int = "Fizz"
   else
     return int
   end
