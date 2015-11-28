@@ -1,7 +1,7 @@
 // DOM Manipulation Challenge
 
 
-// I worked on this challenge [by myself, with: ].
+// I worked on this challenge [with: Peter Wood].
 
 
 // Add your JavaScript calls to this page:
@@ -37,3 +37,12 @@ for (var i = 0; i < release4.length; i++)
 
 var hidden = document.getElementById("hidden");
 document.body.appendChild(hidden.content.cloneNode(true));
+
+// Reflection:
+/*
+- What did you learn about the DOM?
+  It works just like an object, and that object has a hierarchy of elements commonly referred to as 'nodes'. If you can keep track of the hierarchy, accessing the elements is easy.
+
+- What are some useful methods to use to manipulate the DOM?
+  'getElementById()' and 'getElementsByClassName' were super useful for assigning an element from the DOM to a variable that we could then programmatically manipulate. Also, if you use 'getElementsByClassName' it returns an array, so if you want to modify the elements of the array you have to iterate through it.
+*/
