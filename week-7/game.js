@@ -105,7 +105,7 @@ function useWith (a, b)
 //Everything below this is the actual game. Couldn't figure out how to get user input from
 //the terminal, and because of time constraints I didn't finish it. But all the functions and variables are there.
 //---------------------------------------------------------------------------
-
+*/
 var name = "";
 
 rl.question("Hello, fateful user! What's your name?", function(answer) {
@@ -167,7 +167,7 @@ if (wrongInput == true)
 }
 
 //I didn't finish the actual game. I couldn't figure out how to create an event listener to get user input from the terminal.
-*/
+//*/
 // Refactored Code
 
 function Character (name)
